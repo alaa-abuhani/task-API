@@ -20,6 +20,6 @@ Cypress.Commands.add(
       method: "POST",
       url: requestUrl,
       body: userPayload,
-    });
+    }).its("body");
   }
 );
