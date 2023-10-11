@@ -12,6 +12,7 @@ module.exports = defineConfig({
     //  baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
 
     setupNodeEvents(on, config) {
+      require('@cypress/grep/src/plugin')(config)
       allureWriter(on, config);
 
       return config;
@@ -21,7 +22,7 @@ module.exports = defineConfig({
       allure: true,
       download_dir: "./cypress/downloads",
       allureResulsPath: "allure-results",
-      snapshotOnly: true
+      snapshotOnly: true,
     },
 
     videosFolder: "allure-results/",
